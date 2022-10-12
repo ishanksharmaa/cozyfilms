@@ -1,0 +1,65 @@
+<html>
+
+<head>
+    <title>Enter Page!</title>
+    <style>
+        @keyframes animate {
+            0% {
+                /* background-image: radial-gradient(circle, black 60%, purple 100%, transparent 0%); */
+                transform: scale(0, 0);
+            }
+
+            100% {
+                /* background-image: radial-gradient(circle, black 60%, purple 100%, transparent 0%); */
+                transform: scale(10, 10);
+            }
+        }
+
+        body {
+            background-image: url("black-hole-purple.gif");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .animate {
+            background-image: radial-gradient(circle, black 60%, purple 100%, transparent 0%);
+            height: 200px;
+            width: 200px;
+            border-radius: 50%;
+            animation: animate 5.5s;
+            transform: scale(0, 0);
+        }
+    </style>
+</head>
+
+<body onclick="start(); sound();">
+    <audio src="dark-matter.ogg" onended="time()" id="matter">
+        <!-- <embed src="dark-matter.ogg" onended="time()" id="matter" width="0" height="0" hidden="true" /> -->
+    </audio>
+    <div class="container">
+        <div id="ani"></div>
+    </div>
+    <script>
+        function start() {
+            var x = document.getElementById("ani");
+            x.classList.add("animate");
+        }
+        function time() {
+            window.location.href = "dark.html";
+        }
+        function sound() {
+            document.getElementById("matter").volume = 1.0;
+            document.getElementById("matter").play();
+        }
+        setInterval(function black(){
+            document.body.backgroundColor = "black";
+        },1000);
+    </script>
+</body>
+
+</html>

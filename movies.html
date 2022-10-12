@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DARK | Movies</title>
+    <link rel="stylesheet" href="movies.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+</head>
+
+<body>
+    <audio src="dark-matter.ogg" autoplay id="matter"></audio>
+    <div class="opening" id="ani"></div>
+
+    <!-- MENU NAVIGATION -->
+    <div class="navigation">
+        <div class="name">flakes</div>
+        <div class="menu">
+            <ul>
+                <li><a href="#">movies</a></li>
+                <li><a href="#">TV shows</a></li>
+                <li><a href="#">series</a></li>
+                <li><a href="#">trendings</a></li>
+            </ul>
+        </div>
+        <div class="profile">
+            <div class="account">
+                <img src="red.jpg" alt="" class="user">
+                <p class="username">ishank sharma</p>
+                <i id="caret" class="fa-solid fa-caret-down" onclick="caret()"></i>
+                <div class="choose">
+                    <ul>
+                        <li>ishanksharma701@gmial.com</li>
+                        <li>iishanksharma@gmail.com</li>
+                    </ul>
+                </div>
+            </div>
+            <i id="mode" class="fa-solid fa-moon" onclick="mode()"></i>
+            <!-- <img src="sun moon-noloop.gif" id="mode" alt="" onclick="mode(); this.src=this.src"> -->
+        </div>
+    </div>
+
+    <!-- SIDEBAR NAVIGATION -->
+    <div class="sidebar">
+        <div class="side-nav">
+            <div class="search-input">
+                <a title="Search"><i id="search" class="candycons fa-solid fa-search"
+                        onclick="searching(), handle()"></i></a>
+                <form method="get" action="https://www.google.com/search" target="_blank">
+                    <input type="text" name="q" id="input" class="input-before"
+                        placeholder="Search Movies/Shows/Anime's">
+                </form>
+            </div>
+
+            <a title="Home"><i id="home" class="candycons fa-solid fa-home" onclick="start(),sound(),time()"></i></a>
+
+            <a title="Users"><i id="users" class="candycons fa-solid fa-users" onclick="start(),sound(),time()"></i></a>
+
+            <a href="favorites.html" title="Favorites"><i id="favorites" class="candycons fa-solid fa-heart"
+                    onclick="start(),sound(),time()"></i></a>
+
+            <a title="Playlist"><i id="playlist" class="candycons fa-solid fa-bookmark"
+                    onclick="start(),sound(),time()"></i></a>
+
+            <a title="Watch Later"><i id="watch-later" class="candycons fa-solid fa-tv"
+                    onclick="start(),sound(),time()"></i></a>
+
+            <a title="About Us"><i id="about-us" class="candycons fa-solid fa-circle-info"
+                    onclick="start(),sound(),time()"></i></a>
+        </div>
+    </div>
+    <!-- CONTENT CONTAINER-->
+    <!-- MOVIES LIST -->
+    <div class="big-container">
+        <div class="content-container">
+            <iframe class="highlights" src="https://www.youtube.com/embed/O918pH4_sQU?vq=hd1080&autoplay=1&loop=1&mute=1&rel=0&cc_load_policy=1&iv_load_policy=3&controls=0&disablekb=1&playlist=O918pH4_sQU" frameborder="0" allowfullscreen></iframe>
+            <div class="featured-content">
+                <h1 class="featured-logo">the amazing spider man 2</h1>
+                <p class="featured-desc">When New York is put under siege by Oscorp, it is up to Spider-Man to save the
+                    city he swore to protect as well as his loved ones..</p>
+                <button class="featured-button" onclick="addShow()">Watch</button>
+            </div>
+
+            <div class="movie-container">
+                <h1 class="list-title">New Releases</h1>
+                <div class="movie-wrapper">
+                    <i class="prev arrow fa-solid fa-chevron-left"></i>
+                    <i class="next arrow fa-solid fa-chevron-right"></i>
+                    <div class="movie-list">
+                        <div class="movie-items">
+                            <img class="photo" src="stranger-things.jpg" alt="">
+                            <div class="details">
+                                <span class="title">stranger things</span>
+                                <p class="desc">When a young boy disappears, his mother, a police chief and his
+                                    friends
+                                    must
+                                    confront terrifying supernatural forces in order to get him back.</p>
+                                <button class="button">Watch Trailer</button>
+                            </div>
+                        </div>
+                        <div class="movie-items">
+                            <img class="photo" src="locke.jpg" alt="">
+                            <div class="details">
+                                <span class="title">locke & key</span>
+                                <p class="desc">After their father is murdered under mysterious circumstances, the
+                                    three
+                                    Locke siblings and their mother move into their ancestral home, Keyhouse, which
+                                    they
+                                    discover is full of magical keys that may be connected to their father's death.
+                                </p>
+                                <button class="button">Watch Trailer</button>
+                            </div>
+                        </div>
+                        <div class="movie-items">
+                            <img class="photo" src="mr-robot.jpg" alt="">
+                            <div class="details">
+                                <span class="title">mr. robot</span>
+                                <p class="desc">Elliot, a brilliant but highly unstable young cyber-security
+                                    engineer
+                                    and
+                                    vigilante hacker, becomes a key figure in a complex game of global dominance
+                                    when he
+                                    and
+                                    his shadowy allies try to take down the corrupt corporation he works for.</p>
+                                <button class="button">Watch Trailer</button>
+                            </div>
+                        </div>
+                        <div class="movie-items">
+                            <img class="photo" src="asur.jpg" alt="">
+                            <div class="details">
+                                <span class="title">asur</span>
+                                <p class="desc">Elliot, a brilliant but highly unstable young cyber-security
+                                    engineer
+                                    and
+                                    vigilante hacker, becomes a key figure in a complex game of global dominance
+                                    when he
+                                    and
+                                    his shadowy allies try to take down the corrupt corporation he works for.</p>
+                                <button class="button">Watch Trailer</button>
+                            </div>
+                        </div>
+                        <div class="movie-items">
+                            <img class="photo" src="mr-robot.jpg" alt="">
+                            <div class="details">
+                                <span class="title">mr. robot</span>
+                                <p class="desc">Elliot, a brilliant but highly unstable young cyber-security
+                                    engineer
+                                    and
+                                    vigilante hacker, becomes a key figure in a complex game of global dominance
+                                    when he
+                                    and
+                                    his shadowy allies try to take down the corrupt corporation he works for.</p>
+                                <button class="button">Watch Trailer</button>
+                            </div>
+                        </div>
+                        <div class="movie-items">
+                            <img class="photo" src="mr-robot.jpg" alt="">
+                            <div class="details">
+                                <span class="title">mr. robot</span>
+                                <p class="desc">Elliot, a brilliant but highly unstable young cyber-security
+                                    engineer
+                                    and
+                                    vigilante hacker, becomes a key figure in a complex game of global dominance
+                                    when he
+                                    and
+                                    his shadowy allies try to take down the corrupt corporation he works for.</p>
+                                <button class="button">Watch Trailer</button>
+                            </div>
+                        </div>
+                        <div class="movie-items">
+                            <img class="photo" src="mr-robot.jpg" alt="">
+                            <div class="details">
+                                <span class="title">mr. robot</span>
+                                <p class="desc">Elliot, a brilliant but highly unstable young cyber-security
+                                    engineer
+                                    and
+                                    vigilante hacker, becomes a key figure in a complex game of global dominance
+                                    when he
+                                    and
+                                    his shadowy allies try to take down the corrupt corporation he works for.</p>
+                                <button class="button">Watch Trailer</button>
+                            </div>
+                        </div>
+                        <span class="new-show"></span>
+                        <div class="add-div">
+                            <i class=" add-show fa-solid fa-add" onclick="addShow()"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="content-container">
+            <div class="featured-content">
+                <h1 class="featured-logo">heist is about to begin</h1>
+                <p class="featured-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, tempora id
+                    in
+                    veritatis ut nihil
+                    accusamus dicta quo explicabo repellat quae esse magni molestiae sunt debitis maxime fuga nostrum
+                    velit?
+                    Voluptatibus perferendis reiciendis obcaecati eligendi incidunt, laudantium veritatis est dolores
+                    quis
+                    fugiat accusamus anime amet molestiae rerum deleniti totam et.</p>
+                <button class="featured-button">Watch</button>
+            </div>
+
+            <div class="movie-container">
+                <h1 class="list-title">New Releases</h1>
+                <div class="movie-wrapper">
+                    <i class="prev arrow fa-solid fa-chevron-left"></i>
+                    <i class="next arrow fa-solid fa-chevron-right"></i>
+                    <div class="movie-list">
+                        <div class="movie-items">
+                            <img class="photo" src="stranger-things.jpg" alt="">
+                            <div class="details">
+                                <span class="title">stranger things</span>
+                                <p class="desc">When a young boy disappears, his mother, a police chief and his
+                                    friends
+                                    must
+                                    confront terrifying supernatural forces in order to get him back.</p>
+                                <button class="button">Watch Trailer</button>
+                            </div>
+                        </div>
+                        <div class="movie-items">
+                            <img class="photo" src="locke.jpg" alt="">
+                            <div class="details">
+                                <span class="title">locke & key</span>
+                                <p class="desc">After their father is murdered under mysterious circumstances, the
+                                    three
+                                    Locke siblings and their mother move into their ancestral home, Keyhouse, which
+                                    they
+                                    discover is full of magical keys that may be connected to their father's death.
+                                </p>
+                                <button class="button">Watch Trailer</button>
+                            </div>
+                        </div>
+                        <div class="movie-items">
+                            <img class="photo" src="mr-robot.jpg" alt="">
+                            <div class="details">
+                                <span class="title">mr. robot</span>
+                                <p class="desc">Elliot, a brilliant but highly unstable young cyber-security
+                                    engineer
+                                    and
+                                    vigilante hacker, becomes a key figure in a complex game of global dominance
+                                    when he
+                                    and
+                                    his shadowy allies try to take down the corrupt corporation he works for.</p>
+                                <button class="button">Watch Trailer</button>
+                            </div>
+                        </div>
+                        <div class="movie-items">
+                            <img class="photo" src="asur.jpg" alt="">
+                            <div class="details">
+                                <span class="title">asur</span>
+                                <p class="desc">Elliot, a brilliant but highly unstable young cyber-security
+                                    engineer
+                                    and
+                                    vigilante hacker, becomes a key figure in a complex game of global dominance
+                                    when he
+                                    and
+                                    his shadowy allies try to take down the corrupt corporation he works for.</p>
+                                <button class="button">Watch Trailer</button>
+                            </div>
+                        </div>
+                        <div class="movie-items">
+                            <img class="photo" src="mr-robot.jpg" alt="">
+                            <div class="details">
+                                <span class="title">mr. robot</span>
+                                <p class="desc">Elliot, a brilliant but highly unstable young cyber-security
+                                    engineer
+                                    and
+                                    vigilante hacker, becomes a key figure in a complex game of global dominance
+                                    when he
+                                    and
+                                    his shadowy allies try to take down the corrupt corporation he works for.</p>
+                                <button class="button">Watch Trailer</button>
+                            </div>
+                        </div>
+                        <div class="movie-items">
+                            <img class="photo" src="mr-robot.jpg" alt="">
+                            <div class="details">
+                                <span class="title">mr. robot</span>
+                                <p class="desc">Elliot, a brilliant but highly unstable young cyber-security
+                                    engineer
+                                    and
+                                    vigilante hacker, becomes a key figure in a complex game of global dominance
+                                    when he
+                                    and
+                                    his shadowy allies try to take down the corrupt corporation he works for.</p>
+                                <button class="button">Watch Trailer</button>
+                            </div>
+                        </div>
+                        <div class="movie-items">
+                            <img class="photo" src="mr-robot.jpg" alt="">
+                            <div class="details">
+                                <span class="title">mr. robot</span>
+                                <p class="desc">Elliot, a brilliant but highly unstable young cyber-security
+                                    engineer
+                                    and
+                                    vigilante hacker, becomes a key figure in a complex game of global dominance
+                                    when he
+                                    and
+                                    his shadowy allies try to take down the corrupt corporation he works for.</p>
+                                <button class="button">Watch Trailer</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="content-container">
+            <div class="featured-content">
+                <h1 class="featured-logo">heist is about to begin</h1>
+                <p class="featured-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, tempora id
+                    in
+                    veritatis ut nihil
+                    accusamus dicta quo explicabo repellat quae esse magni molestiae sunt debitis maxime fuga nostrum
+                    velit?
+                    Voluptatibus perferendis reiciendis obcaecati eligendi incidunt, laudantium veritatis est dolores
+                    quis
+                    fugiat accusamus anime amet molestiae rerum deleniti totam et.</p>
+                <button class="featured-button">Watch</button>
+            </div>
+
+            <div class="movie-container">
+                <h1 class="list-title">New Releases</h1>
+                <div class="movie-wrapper">
+                    <i class="prev arrow fa-solid fa-chevron-left"></i>
+                    <i class="next arrow fa-solid fa-chevron-right"></i>
+                    <div class="movie-list">
+                        <div class="movie-items">
+                            <img class="photo" src="stranger-things.jpg" alt="">
+                            <div class="details">
+                                <span class="title">stranger things</span>
+                                <p class="desc">When a young boy disappears, his mother, a police chief and his
+                                    friends
+                                    must
+                                    confront terrifying supernatural forces in order to get him back.</p>
+                                <button class="button">Watch Trailer</button>
+                            </div>
+                        </div>
+                        <div class="movie-items">
+                            <img class="photo" src="locke.jpg" alt="">
+                            <div class="details">
+                                <span class="title">locke & key</span>
+                                <p class="desc">After their father is murdered under mysterious circumstances, the
+                                    three
+                                    Locke siblings and their mother move into their ancestral home, Keyhouse, which
+                                    they
+                                    discover is full of magical keys that may be connected to their father's death.
+                                </p>
+                                <button class="button">Watch Trailer</button>
+                            </div>
+                        </div>
+                        <div class="movie-items">
+                            <img class="photo" src="mr-robot.jpg" alt="">
+                            <div class="details">
+                                <span class="title">mr. robot</span>
+                                <p class="desc">Elliot, a brilliant but highly unstable young cyber-security
+                                    engineer
+                                    and
+                                    vigilante hacker, becomes a key figure in a complex game of global dominance
+                                    when he
+                                    and
+                                    his shadowy allies try to take down the corrupt corporation he works for.</p>
+                                <button class="button">Watch Trailer</button>
+                            </div>
+                        </div>
+                        <div class="movie-items">
+                            <img class="photo" src="asur.jpg" alt="">
+                            <div class="details">
+                                <span class="title">asur</span>
+                                <p class="desc">Elliot, a brilliant but highly unstable young cyber-security
+                                    engineer
+                                    and
+                                    vigilante hacker, becomes a key figure in a complex game of global dominance
+                                    when he
+                                    and
+                                    his shadowy allies try to take down the corrupt corporation he works for.</p>
+                                <button class="button">Watch Trailer</button>
+                            </div>
+                        </div>
+                        <div class="movie-items">
+                            <img class="photo" src="mr-robot.jpg" alt="">
+                            <div class="details">
+                                <span class="title">mr. robot</span>
+                                <p class="desc">Elliot, a brilliant but highly unstable young cyber-security
+                                    engineer
+                                    and
+                                    vigilante hacker, becomes a key figure in a complex game of global dominance
+                                    when he
+                                    and
+                                    his shadowy allies try to take down the corrupt corporation he works for.</p>
+                                <button class="button">Watch Trailer</button>
+                            </div>
+                        </div>
+                        <div class="movie-items">
+                            <img class="photo" src="mr-robot.jpg" alt="">
+                            <div class="details">
+                                <span class="title">mr. robot</span>
+                                <p class="desc">Elliot, a brilliant but highly unstable young cyber-security
+                                    engineer
+                                    and
+                                    vigilante hacker, becomes a key figure in a complex game of global dominance
+                                    when he
+                                    and
+                                    his shadowy allies try to take down the corrupt corporation he works for.</p>
+                                <button class="button">Watch Trailer</button>
+                            </div>
+                        </div>
+                        <div class="movie-items">
+                            <img class="photo" src="mr-robot.jpg" alt="">
+                            <div class="details">
+                                <span class="title">mr. robot</span>
+                                <p class="desc">Elliot, a brilliant but highly unstable young cyber-security
+                                    engineer
+                                    and
+                                    vigilante hacker, becomes a key figure in a complex game of global dominance
+                                    when he
+                                    and
+                                    his shadowy allies try to take down the corrupt corporation he works for.</p>
+                                <button class="button">Watch Trailer</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="movies.js"></script>
+</body>
+
+</html>

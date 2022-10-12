@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DARK | Official Website</title>
+    <link rel="stylesheet" href="dark.css">
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+</head>
+
+<body>
+    <video src="dark.mp4" autoplay muted loop id="myvideo"></video>
+    <header id="all">
+
+        <div class="main">
+            <div class="name">𝓓𝓪𝓻𝓴 𝓢𝓲𝓽𝓮</div>
+            <div class="nav">
+                <ul>
+                    <li><a href="https://ishanksharmaa.github.io/darksite/" onclick="start(), sound()"><span>home</span></a></li>
+                    <li><a onclick="start(), sound(), time()">interests</a></li>
+                    <li><a href="#">services</a></li>
+                    <li><a href="#">about us</a></li>
+                </ul>
+            </div>
+        </div>
+        <audio src="dark.mp3" autoplay loop id="myaudio"></audio>
+        <audio src="dark-matter.ogg" autoplay id="matter"></audio>
+    </header>
+
+    <section>
+
+        <div class="container">
+            <div class="opening" id="ani"></div>
+        </div>
+
+    </section>
+
+    <!-- JAVASCRIPT -->
+    <script>
+        document.getElementById("myaudio").volume = 0.5;
+
+        function time() {
+            setTimeout(function () {
+                window.location.href = "movies.html";
+            }, 5000);
+        }
+        function start() {
+            var x = document.getElementById("ani");
+            x.classList.remove("opening");
+            x.classList.add("animate");
+        }
+        function sound() {
+            document.getElementById("matter").play();
+            setInterval(function remove(){
+                document.getElementById("myaudio").remove();
+            },2500);
+        }
+    </script>
+</body>
+
+</html>

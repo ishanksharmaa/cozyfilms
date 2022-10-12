@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interests</title>
+    <link rel="stylesheet" href="favorites.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <header id="start" onclick="start()">
+        <div class="p-bar">
+            <div class="progress" id="bar"></div>
+        </div>
+    </header>
+    <audio src="dark-matter.ogg" autoplay id="matter"></audio>
+    <div class="heading">
+        <h1>favorites</h1>
+        <p>shows i like to watch</p>
+    </div>
+
+    <section>
+        <div class="container">
+            <div class="opening" id="ani"></div>
+        </div>
+        <div class="shows-list">
+            <div class="items" id="box1">
+                <div class="photo" id="dark" onmouseenter="add()" onmouseleave="remove()"></div>
+                <div class="title"><a href="https://www.youtube.com/watch?v=rrwycJ08PSA" target="_blank">DARK</a></div>
+                <div class="total">Total Seasons -<input type="text" value="3" class="no" placeholder="?"></div>
+            </div>
+            <div class="items" id="box2">
+                <div class="photo" id="mr" onmouseenter="add()" onmouseleave="remove()"></div>
+                <div class="title">MR. ROBOT</div>
+                <div class="total">Total Seasons -<input type="text" value="4" class="no" placeholder="?"></div>
+            </div>
+            <div class="items" id="box3">
+                <div class="photo" id="mh" onmouseenter="add()" onmouseleave="remove()"></div>
+                <div class="title">money heist</div>
+                <div class="total">Total Seasons -<input type="text" value="5" class="no" placeholder="?"></div>
+            </div>
+            <div class="items" id="box4">
+                <div class="photo" id="st" onmouseenter="add()" onmouseleave="remove()"></div>
+                <div class="title">stranger things</div>
+                <div class="total">Total Seasons -<input type="text" value="4" class="no" placeholder="?"></div>
+            </div>
+            <div class="items" id="box5">
+                <div class="photo" id="dexter" onmouseenter="add()" onmouseleave="remove()"></div>
+                <div class="title">Dexter - new blood</div>
+                <div class="total">Total Seasons -<input type="text" value="8" class="no" placeholder="?"></div>
+            </div>
+            <div class="items" id="box6">
+                <div class="photo" id="lucifer" onmouseenter="add()" onmouseleave="remove()"></div>
+                <div class="title">lucifer</div>
+                <div class="total">Total Seasons -<input type="text" class="no" placeholder="?"></div>
+            </div>
+            <div class="items" id="box7">
+                <div class="photo" id="key" onmouseenter="add()" onmouseleave="remove()"></div>
+                <div class="title">locke & key</div>
+                <div class="total">Total Seasons -<input type="text" value="2" class="no" placeholder="?"></div>
+            </div>
+            <div class="items" id="box8">
+                <div class="photo" id="asur" onmouseenter="add()" onmouseleave="remove()"></div>
+                <div class="title">asur</div>
+                <div class="total">Total Seasons -<input type="text" value="1" class="no" placeholder="?"></div>
+            </div>
+            <div class="items" id="box9">
+                <div class="photo" id="travellers" onmouseenter="add()" onmouseleave="remove()"></div>
+                <div class="title">travellers</div>
+                <div class="total">Total Seasons -<input type="text" value="6" class="no" placeholder="?"></div>
+            </div>
+            <div class="items" id="extra">
+                <div class="photo" id="add"><i class="fa fa-plus"></i></div>
+            </div>
+        </div>
+    </section>
+    <script>
+        function add() {
+            var a = document.createElement('a');
+            a.setAttribute('id', 'mylink');
+            var link = document.createTextNode("Watch Trailer");
+            a.appendChild(link);
+            // a.title = "On YouTube";
+            a.href = "https://youtu.be/TFJwUwnShnA";
+            a.target = "_blank";
+            a.style.opacity = 100;
+            document.getElementById("mh").appendChild(a);
+        }
+        function remove() {
+            var a = document.getElementById("mylink");
+            a.remove();
+        }
+        window.onscroll = function () { myFunction() };
+
+        function myFunction() {
+            var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            var scrolled = (winScroll / height) * 100;
+            document.getElementById("bar").style.width = scrolled + "%";
+        }
+        window.onload = function start(){
+            document.getElementById("start").click();
+        }
+    </script>
+</body>
+
+</html>

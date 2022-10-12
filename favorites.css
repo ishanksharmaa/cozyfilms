@@ -1,0 +1,218 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: grey;
+    height: 200vh;
+    width: 100%;
+    z-index: 0;
+}
+
+::selection {
+    background: lightcoral;
+    color: black;
+}
+
+.opening {
+    background-image: radial-gradient(circle, black 60%, purple 100%, transparent 0%);
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    animation: opening 3.5s;
+    transform: scale(0, 0);
+    overflow: hidden;
+}
+
+@keyframes opening {
+    0% {
+        transform: scale(10, 10);
+    }
+
+    100% {
+        transform: scale(0, 0);
+    }
+}
+
+.container {
+    /* background: red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+}
+
+.p-bar {
+    background: #ccc;
+    width: 100%;
+    height: 5px;
+}
+
+.progress {
+    background: coral;
+    height: 5px;
+    width: 0%;
+}
+
+.heading {
+    background: black;
+    color: white;
+    height: 150px;
+    width: 100%;
+    text-transform: capitalize;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    /* color: lightcoral; */
+    font-weight: 550;
+    font-size: 55px;
+}
+
+p {
+    font-size: 13px;
+}
+
+.shows-list {
+    background: black;
+    height: 100%;
+    position: relative;
+    padding: 30px;
+    grid-gap: 30px;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 400px 400px 400px;
+    grid-template-rows: auto auto auto;
+}
+
+.items {
+    /* background: black; */
+    /* border: 2px solid red; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* margin:  auto; */
+    font-weight: 550;
+}
+
+.photo {
+    /* cursor: pointer; */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: white;
+    border: 4px solid white;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 1;
+}
+
+.photo:hover {
+    transition: all 0.6s ease;
+    opacity: 0.6;
+}
+
+#mylink,
+a {
+    color: white;
+    text-decoration: none;
+}
+
+#mylink:hover,
+a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+
+#dark {
+    background-image: url("dark-logo.jpg");
+}
+
+#mr {
+    background-image: url("mr-robot.jpg");
+}
+
+#mh {
+    background-image: url("mh-dali.jpg");
+}
+
+#st {
+    background-image: url("stranger-things.jpg");
+}
+
+#dexter {
+    background-image: url("dexter.jpg");
+}
+
+#lucifer {
+    background-image: url("https://wallpapercave.com/wp/wp7150978.jpg");
+}
+
+#key {
+    background-image: url("locke.jpg");
+}
+
+#asur {
+    background-image: url("asur.jpg");
+}
+
+#travellers {
+    background-image: url("travellers.jpg");
+}
+
+.title {
+    background: transparent;
+    color: white;
+    text-transform: capitalize;
+    /* border: 2px solid red; */
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    padding: 6px 6px 6px 16px;
+}
+
+.total {
+    color: white;
+    font-size: 12px;
+    padding-left: 16px;
+}
+
+.no {
+    background: transparent;
+    color: white;
+    width: 26px;
+    text-align: center;
+    border: none;
+    outline: none;
+    font-weight: 550;
+}
+
+#add:hover {
+    /* color: purple; */
+    border: 4px solid purple;
+    box-shadow: 7px 10px 26px 00.1em purple;
+    opacity: 1;
+}
+
+#add i {
+    font-size: 30px;
+}
